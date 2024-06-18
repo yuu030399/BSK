@@ -52,5 +52,3 @@
 - IDE：Cloud9
 ​
 
-実装機能リストのURL 
-https://docs.google.com/spreadsheets/d/1dnHx9-zLsTXrAhuudT2ekoeVF4NM2RVgbOBUMLNHRYE/edit?usp=sharing
