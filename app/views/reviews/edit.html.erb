@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+<h2>Editing Review</h2>
+<% if @review.errors.any? %>
+  <%= @review.errors.count %>errors prohibited this obj from being saved:
+  <ul>
+    <% @review.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_with model: @review do |f| %>
+ <h4>商品名</h4>
+  <%= f.text_field :product_name %>
+  <h4>金額</h4>
+  <%= f.number_field :amount %>
+  <h2>カテゴリー</h2>
+  <%= f.collection_select :category_id, Category.all, :id, :brand_name, { prompt: '選択してください' }, class: 'form-control' %>
+  
+ 
+<br>
+  <%= f.submit 'Update Review',class: "btn btn-secondary" %>
+<br>
+  <%= link_to "Show", review_path(@review) %> | <%= link_to "Back", reviews_path %>
+   
+
+<% end %>
+</div>
+</div>
+</div>
