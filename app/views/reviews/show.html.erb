@@ -12,6 +12,7 @@
   <%= link_to @user.name, user_path(@user.id) %></td>
   <%=@review.product_name %>
   <%=@review.amount %>円
+  <%=@review.category.brand_name %>
   <%= render 'static_rate', review: @review %>
     
 </div>
