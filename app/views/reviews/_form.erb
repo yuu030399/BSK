@@ -7,7 +7,7 @@
   <%= f.number_field :amount %>
   <h2>カテゴリー</h2>
   <%= f.collection_select :category_id, Category.all, :id, :brand_name, { prompt: '選択してください' }, class: 'form-control' %>
-  
+
 
   <% if review.id.nil? %>
     <div class="form-group" id="rate">
@@ -25,14 +25,15 @@
           starOff: "<%= asset_path('star-off.png') %>",
           starHalf: "<%= asset_path('star-half.png') %>",
           scoreName: 'review[rate]',
+          half: true
         };
         raty(elem, opt);
       });
     </script>
-    
+
     <%= f.submit 'Create Review' %>
-    
-    
+
+
   <% else %>
     <div class="form-group">
        # 評価の編集機能実装時に考える
