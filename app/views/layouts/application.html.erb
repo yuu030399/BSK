@@ -64,9 +64,13 @@
       </nav>
    </header>
   <%= flash[:notice] %>
+ 
+  <%= flash[:notice] %>
+  <%= render 'public/searches/search', review: @review %>
     <%= yield %>
      
   </div>
+  
   
     	
 

@@ -1,0 +1,30 @@
+<h2>Results index</h2>
+
+<table class="table table-hover table-inverse">
+  <!--検索対象モデルがUserの時 -->
+  <% if @range == "User" %>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  <% else %>
+    <!--検索対象モデルがUserではない時(= 検索対象モデルがBookの時) -->
+   <tbody>
+  <% @reviews.each do |review| %>
+  <tr>
+   <%#= link_to image_tag(@user.get_profile_image(100, 100)), review.user %>
+
+<%#= link_to review.product_name, review_path(review.id)%>
+  <td><%= link_to review.product_name, review_path(review.id)%> </td>
+  <td><%=review.amount  %></td>
+　<td><%=review.category.brand_name%></td>
+   <td> <%= link_to "Edit", edit_review_path(review.id) %></td>
+   <td> <%= link_to "Destroy", review_path(review.id), method: :delete, "data-confirm" => "本当に消しますか？" %></td>
+<% end %>
+</tr>
+</tbody>
+  <% end %>
+</table>

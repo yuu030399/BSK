@@ -1,4 +1,4 @@
-class ReviewsController < ApplicationController
+class Public::ReviewsController < ApplicationController
   def index
     @user=current_user
     @reviews=Review.all
@@ -53,7 +53,8 @@ class ReviewsController < ApplicationController
 
       @reviews=Review.all
       @review=Review.find(params[:id])
-       @user=@review.user
+      @user=@review.user
+      @comment = Comment.new
  end
  
    def destroy
