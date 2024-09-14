@@ -30,8 +30,8 @@ class Public::ReviewsController < ApplicationController
 
 
   def edit
-      @review = Review.find(params[:id])
-    
+      
+      @review=Review.find(params[:id])
   end
     
 

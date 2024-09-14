@@ -17,8 +17,8 @@
   <%= f.number_field :amount %>
   <h2>カテゴリー</h2>
   <%= f.collection_select :category_id, Category.all, :id, :brand_name, { prompt: '選択してください' }, class: 'form-control' %>
-  
- 
+  <h2>評価</h2>
+ <%= render 'static_rate', review: @review %>
 <br>
   <%= f.submit 'Update Review',class: "btn btn-secondary" %>
 <br>
