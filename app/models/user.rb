@@ -8,7 +8,13 @@ class User < ApplicationRecord
           
           has_many :comments, dependent: :destroy
           has_one_attached :profile_image
-          
+            has_many :group_users, dependent: :destroy
+            
+            def get_group_image
+               (group_image.attached?) ? group_image : 'no_image.jpg'
+            end
+
+  
           # 検索方法分岐
   def self.looks(search, word)
     if search == "perfect_match"

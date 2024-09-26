@@ -11,3 +11,12 @@ Category.find_or_create_by!(brand_name: "UNDER ARMOUR")
 Category.find_or_create_by!(brand_name: "JORDAN")
 Category.find_or_create_by!(brand_name: "asics")
 Category.find_or_create_by!(brand_name: "その他")
+
+
+Tag.create([
+    { name: 'NIKE' },
+    { name: 'UNDER ARMOUR' },
+    { name: 'JORDAN'},
+    { name: 'asics'},
+    { name: 'その他'},
+    ])
