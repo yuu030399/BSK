@@ -20,3 +20,6 @@ Tag.create([
     { name: 'asics'},
     { name: 'その他'},
     ])
+    
+    
+    Admin.create!(email: '', password: 'piyopiyo', name: 'apiyo')

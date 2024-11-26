@@ -67,8 +67,8 @@ ActiveRecord::Schema.define(version: 2024_09_17_142552) do
   end
 
   create_table "group_users", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "group_id", null: false
+    t.integer "user_id"
+    t.integer "group_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["group_id"], name: "index_group_users_on_group_id"
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 2024_09_17_142552) do
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.text "introduction"
+    t.integer "owner_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
