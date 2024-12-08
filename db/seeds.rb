@@ -22,4 +22,4 @@ Tag.create([
     ])
     
     
-    Admin.create!(email: '', password: 'piyopiyo', name: 'apiyo')
+    Admin.create!(email: 'test@example.com', password: 'yami0303')
